@@ -8,7 +8,7 @@ function AuthProvider({children}){
 
     function googleLogin(){
         signInWithPopup(auth, provider)
-        .then(result=>console.log(result.user.displayName))
+        .then(result=>console.log(result))
         .catch(error=>console.error(error.message))
     }
   return (
