@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,7 +6,7 @@
 @layer base{
 
   :root{
-    --primary-color:#b657e6;
+    --primary-color: #0dd1a7;
   }
 
 
@@ -19,35 +20,44 @@
 }
 
 @layer components{
-  label{
-    @apply transition-all duration-300 absolute left-[10px] -top-[20%] peer-placeholder-shown:top-[30%] font-semibold text-lg text-gray-800/45
+  body{
+    font-family: "Raleway", sans-serif;
+  }
+  .customLabel{
+    @apply transition-all duration-300 absolute left-[10px] md:-top-[20%] -top-[10%] peer-placeholder-shown:top-[30%] font-semibold text-lg text-gray-800/45
+  }
+  button{
+    @apply btn_anim
   }
 }
 
 
 @layer utilities{
 
+  .btn_anim{
+    @apply active:translate-y-2 hover:bg-opacity-95 transition-all duration-300
+  }
   .btn_primary{
-    @apply px-10 py-2 text-lg rounded-e-full rounded-s-full btn_anim font-semibold
+    @apply rounded-e-full rounded-s-full btn_anim font-semibold
   }
 
-  .btn_anim{
-    @apply active:translate-y-1 hover:bg-opacity-95 hover:animate-pulse transition-all duration-200
-  }
 
   .active{
-    @apply bg-purple-800/85 px-6 py-2 text-sm rounded-e-full rounded-s-full btn_anim text-white whitespace-nowrap
+    @apply bg-[var(--primary-color)] px-6 py-2 text-sm rounded-e-full rounded-s-full btn_anim text-white whitespace-nowrap
   }
   .inactive{
     @apply px-6 py-2 text-sm rounded-e-full rounded-s-full btn_anim whitespace-nowrap
   }
   .dropActive{
-    @apply bg-purple-800/85 px-6 py-2 w-full text-center text-xl btn_anim text-white whitespace-nowrap
+    @apply bg-[var(--primary-color)] px-6 py-2 w-full text-center text-xl btn_anim text-white whitespace-nowrap
   }
   .dropInactive{
     @apply px-6 py-2 w-full btn_anim whitespace-nowrap text-gray-900 text-center text-xl
   }
   .primary_input{
-    @apply w-full border-b-2 border-gray-700/25 border-t-0 border-l-0 border-e-0 my-3
+    @apply w-full border-b-2 border-gray-700/25 border-t-0 border-l-0 border-e-0 my-3 md:mt-2 mt-5
+  }
+  .google_button{
+    @apply flex justify-center items-center gap-4 pr-5 pl-3 py-2 btn_primary border-[2px] hover:text-white hover:bg-black
   }
 }

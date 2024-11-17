@@ -8,6 +8,7 @@ import Portfolio from "./Pages/Portfolio/Portfolio";
 import Registration from "./Pages/Registration/Registration";
 import SignUp from "./Pages/Registration/SignUp";
 import SignIn from "./Pages/Registration/SignIn";
+import SecuredRoute from "./SecuredRoute";
 
 const Routes = createBrowserRouter([
     {
@@ -29,7 +30,9 @@ const Routes = createBrowserRouter([
             },
             {
                 path:"portfolio",
-                element:<Portfolio/>
+                element:<SecuredRoute>
+                    <Portfolio/>
+                </SecuredRoute>
             },
             {
                 path:"registration",
