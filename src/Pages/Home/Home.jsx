@@ -3,7 +3,7 @@ import Update from "../UpdatePage/Update"
 function Home() {
   return (
     <div>
-        <Update/>
+        Home
     </div>
   )
 }

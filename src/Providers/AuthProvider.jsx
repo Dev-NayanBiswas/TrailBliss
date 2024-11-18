@@ -7,7 +7,9 @@ import {
   GoogleAuthProvider, 
   onAuthStateChanged, 
   signInWithEmailAndPassword, 
-  createUserWithEmailAndPassword 
+  createUserWithEmailAndPassword, 
+  sendPasswordResetEmail,
+  updateProfile
   } from "firebase/auth";
 
 function AuthProvider({children}){
@@ -36,11 +38,31 @@ function AuthProvider({children}){
       return signInWithEmailAndPassword(auth, email, password)
     }
 
+    //! Update UserProfile
+    function updateUserProfile(displayName, photoURL){
+      return updateProfile(auth.currentUser, {
+        displayName: displayName, photoURL: photoURL
+      })
+    }
+
+    //! Send a password reset email
+    function resetPasswordEmail(email){
+      return sendPasswordResetEmail(auth, email)
+    } 
+
+    //! SignOut 
+    function signOutUser(){
+      setLoading(true)
+      signOut(auth)
+      setUserData(null)
+    }
+
     //! Observer 
     useEffect(()=>{
       const subscriber = onAuthStateChanged(auth,(currentUser)=>{
         setUserData(currentUser)
         setLoading(false)
+        console.log(currentUser)
 
         return ()=>{
           subscriber()
@@ -48,13 +70,7 @@ function AuthProvider({children}){
       }) 
     },[])
 
-    //! SignOut 
-    function signOutUser(){
-      setLoading(true)
-      signOut(auth)
-      setUserData(null)
-        
-    }
+    
 
     const authObject = {
       loading,
@@ -62,6 +78,8 @@ function AuthProvider({children}){
       googleLogin,
       signOutUser,
       signingWithEmail,
+      updateUserProfile,
+      resetPasswordEmail,
       registrationWithEmail
     }
   return (

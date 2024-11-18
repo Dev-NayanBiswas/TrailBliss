@@ -16,7 +16,7 @@ function Portfolio(){
                 <section className="p-4 rounded-xl flex flex-col gap-5">
                     <div className="grid place-items-center">
                     <figure className="h-24 aspect-1 rounded-full bg-green-400 p-2">
-                      <img className="h-full bg-gray-200 rounded-full" src={photoURL} alt={displayName} />
+                      <img className="h-full bg-gray-200 rounded-full object-cover" src={photoURL} alt={displayName} />
                     </figure>
                     </div>
                     <p></p>

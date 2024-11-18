@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ImageUploader from "../../Utilities/Scripts/ImageUploader";
 
 function Update() {
     const navigate = useNavigate();
@@ -30,6 +31,9 @@ function Update() {
       <section>
         <section className="h-full w-full flex items-center justify-center">
           <form action='' className="w-full h-[80vh] flex justify-center items-center flex-col">
+          <figure className="h-16 w-16 mx-auto">
+                <img src={ImageUploader("updateUser.png")} alt='' className="h-full w-full object-cover object-center" />
+              </figure>
             <h1 className='text-center text-gray-500 font-semibold text-2xl my-4'>
               Update Your Profile
             </h1>

@@ -1,9 +1,12 @@
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { TbEyeClosed } from "react-icons/tb";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import ImageUploader from "../../Utilities/Scripts/ImageUploader";
+import { AuthContext } from "../../Utilities/Scripts/AllContext";
 
 function SignUp(){
+  const {registrationWithEmail,updateUserProfile} = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   console.log(location)
@@ -13,6 +16,7 @@ function SignUp(){
     emailErr:"",
     passErr:""
   });
+  const [authError, setAuthError] = useState(null)
   const [userData, setUserData] = useState({
     name:"",
     imageURL:"",
@@ -24,6 +28,7 @@ function SignUp(){
 
   function handleSubmit(e){
     e.preventDefault();
+    setAuthError(null)
     const{name,value,checked} = e.target;
     setUserData({...userData, [name]: name === "terms"? checked : value})
     
@@ -46,7 +51,7 @@ function SignUp(){
     e.preventDefault();
     const errorExisted = Object.values(signUpErr).some(err=>err.length > 0)
     const hasEmptyFields = Object.values(userData).some(data=> data===""|| data=== false)
-    if(errorExisted){
+    if(errorExisted ){
           alert("Fix the Errors first")
           return
         }
@@ -55,8 +60,18 @@ function SignUp(){
       return
     }
     else{
-      alert("Good to Gooooooo")
-      console.log(userData)
+      //! Creating New User 
+      registrationWithEmail(userData.email, userData.password)
+      .then(()=>{
+        alert("New User Created");
+        updateUserProfile(userData.name,userData.imageURL)
+        .then(()=>{
+          navigate("/")
+          alert("User Updated")})
+        .catch(err=>console.log(err.message))
+        
+      })
+      .catch(err=>setAuthError(err.message))
         }
     }
 
@@ -64,6 +79,9 @@ function SignUp(){
     <>
       <section>
       <form action="" className="text-center my-20">
+      <figure className="h-16 w-16 mx-auto">
+                <img src={ImageUploader("note.png")} alt='' className="h-full w-full object-cover object-center" />
+              </figure>
       <h1 className="text-center text-gray-500 font-semibold text-2xl my-4">Sign Up</h1>
       {/*ImageURl*/}
       <section className="relative my-3 lg:w-5/12 md:w-10/12 w-full mx-auto">
@@ -99,7 +117,8 @@ function SignUp(){
         placeholder="" 
         className="peer primary_input"/>
         <label className="text-center customLabel">Email</label>
-        {signUpErr.emailErr?.length ? <p className="text-red-500 text-xs italic mb-2 text-left">{signUpErr.emailErr}</p> :""}
+        {signUpErr.emailErr?.length? <p className="text-red-500 text-xs italic mb-2 text-left">{signUpErr.emailErr}</p> :""}
+        {authError && authError === "Firebase: Error (auth/email-already-in-use)."? <p className="text-red-500 text-xs italic mb-2 text-left">This Email already in use, Try Sign in</p> :""}
         </section>
 
         {/* Password */}

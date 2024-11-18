@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import resetImage from "../../../assets/reset.png"
+import ImageUploader from "../../../Utilities/Scripts/ImageUploader";
 
 function ForgotPass(){
     const navigate = useNavigate()
@@ -29,11 +31,11 @@ function ForgotPass(){
         <section>
           <section>
             <section className="text-center flex flex-col gap-3">
-              <figure>
-                <img src='' alt='' />
+            <figure className="h-16 w-16 mx-auto">
+                <img src={ImageUploader("PassReset.png")} alt='' className="h-full w-full object-cover object-center" />
               </figure>
               <h4 className="text-3xl font-semibold text-gray-600/65">Forgot Password</h4>
-              <p className="text-sm">
+              <p className="text-sm w-3/12 mx-auto">
                 Enter your email and we will send you a link to reset your
                 Password
               </p>
