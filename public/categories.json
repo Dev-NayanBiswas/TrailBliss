@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "categoryName": "Hiking",
+      "image": "Hiking.png"
+    },
+    {
+      "id": 2,
+      "categoryName": "Water Adventures",
+      "image": "waterAdventures.png"
+    },
+    {
+      "id": 3,
+      "categoryName": "Adventure Sports",
+      "image": "adventureSports.png"
+    },
+    {
+      "id": 4,
+      "categoryName": "Relaxation",
+      "image": "relaxation.png"
+    },
+    {
+      "id": 5,
+      "categoryName": "Wildlife",
+      "image": "wildLife.png"
+    },
+    {
+      "id": 6,
+      "categoryName": "Camping Retreats",
+      "image": "CampingRetreats.png"
+    },
+    {
+      "id": 7,
+      "categoryName": "Desert Exploration",
+      "image": "DesertExploration.png"
+    },
+    {
+      "id": 8,
+      "categoryName": "Mountain Treks",
+      "image": "MountainTreks.png"
+    }
+  ]
+  

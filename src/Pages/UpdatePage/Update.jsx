@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ImageUploader from "../../Utilities/Scripts/ImageUploader";
+import { AuthContext } from "../../Utilities/Scripts/AllContext";
 
 function Update() {
     const navigate = useNavigate();
+    const {updateUserProfile} = useContext(AuthContext);
     const [updateData, setUpdateData] = useState({
         name:"",
         imageURL:""
@@ -22,8 +24,12 @@ function Update() {
         if(validate){
             alert("Cant Submit Empty Field")
         }else{
-            alert("Good to Go");
+          updateUserProfile(updateData.name, updateData.imageURL)
+          .then(()=>{
+            alert("Profile Updated")
             navigate("/portfolio")
+          })
+          .catch(err=>alert(err.message))
         }
     }
   return (

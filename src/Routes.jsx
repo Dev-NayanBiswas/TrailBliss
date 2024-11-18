@@ -11,6 +11,8 @@ import SignIn from "./Pages/Registration/SignIn";
 import SecuredRoute from "./SecuredRoute";
 import Update from "./Pages/UpdatePage/Update";
 import ForgotPass from "./Pages/Home/ForgotPass/ForgotPass";
+import AllCards from "./Pages/Home/AllCards";
+import CategoryWiseCards from "./Pages/Home/CategoryWiseCards";
 
 const Routes = createBrowserRouter([
     {
@@ -20,7 +22,18 @@ const Routes = createBrowserRouter([
         children:[
             {
                 path:"/",
-                element:<Home/>
+                element:<Home/>,
+                loader:()=>fetch("../adventure.json"),
+                children:[
+                    {
+                        path:"/",
+                        element:<AllCards/>
+                    },
+                    {
+                        path:"categoryWiseCards/:category",
+                        element:<CategoryWiseCards/>
+                    }
+                ]
             },
             {
                 path:"aboutUs",

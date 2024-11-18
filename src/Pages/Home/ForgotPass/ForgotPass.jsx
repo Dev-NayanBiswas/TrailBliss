@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import resetImage from "../../../assets/reset.png"
 import ImageUploader from "../../../Utilities/Scripts/ImageUploader";
+import { AuthContext } from "../../../Utilities/Scripts/AllContext";
+import dynamicTitle from "../../../Utilities/Scripts/dynamicTitle";
 
 function ForgotPass(){
+    dynamicTitle();
+    const {resetPasswordEmail} = useContext(AuthContext);
     const navigate = useNavigate()
     const [email,setEmail] = useState("")
     const emailRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -15,7 +18,10 @@ function ForgotPass(){
             alert("Enter a valid Email")
             return
         }else{
-            alert("Good to Gooo")
+            resetPasswordEmail(email)
+            .then(()=>{
+                alert(`Confirmation sent to ${email}`)
+            })
         }
     }
 

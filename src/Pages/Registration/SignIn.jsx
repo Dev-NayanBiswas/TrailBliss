@@ -5,10 +5,11 @@ import { TbEyeClosed } from "react-icons/tb";
 import { FaEye } from "react-icons/fa6";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import ImageUploader from "../../Utilities/Scripts/ImageUploader";
+import dynamicTitle from "../../Utilities/Scripts/dynamicTitle";
 
 
 function SignIn(){
-
+  dynamicTitle();
   const[showPass, setShowPass] = useState(false);
   const[authError, setAuthError] = useState(null);
   const {userData, signingWithEmail} = useContext(AuthContext);
