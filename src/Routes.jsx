@@ -9,6 +9,8 @@ import Registration from "./Pages/Registration/Registration";
 import SignUp from "./Pages/Registration/SignUp";
 import SignIn from "./Pages/Registration/SignIn";
 import SecuredRoute from "./SecuredRoute";
+import Update from "./Pages/UpdatePage/Update";
+import ForgotPass from "./Pages/Home/ForgotPass/ForgotPass";
 
 const Routes = createBrowserRouter([
     {
@@ -33,6 +35,14 @@ const Routes = createBrowserRouter([
                 element:<SecuredRoute>
                     <Portfolio/>
                 </SecuredRoute>
+            },
+            {
+                path:"updatePage",
+                element:<Update/>
+            },
+            {
+                path:"reset",
+                element:<ForgotPass/>
             },
             {
                 path:"registration",

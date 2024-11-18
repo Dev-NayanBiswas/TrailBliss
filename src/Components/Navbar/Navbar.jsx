@@ -4,16 +4,16 @@ import { NavLink } from "react-router-dom"
 import Search from "./Search"
 import DropDown from "./DropDown"
 import { useState } from "react";
-import trailBliss from "../../assets/trailBliss.png"
+import trailBliss from "../../assets/logo.webp"
 
 function Navbar(){
     const [showDrop, setShowDrop] = useState(false);
   return (
     <>
         <nav className="flex justify-between items-center relative h-[10vh] w-full mx-auto lg:px-2 px-5">
-            <nav className="w-full flex justify-start items-center">
-                <figure className="md:h-10 h-7 -hue-rotate-60">
-                    <img className="h-full w-full object-cover -scale-x-100 -rotate-12" src={trailBliss} alt="" />
+            <nav className="w-full flex justify-start items-center gap-1">
+                <figure className="md:h-14 h-7 rounded-full">
+                    <img className="h-full w-full object-cover -scale-x-100 -rotate-12 rounded-full" src={trailBliss} alt="" />
                 </figure>
                 <h1 className="md:text-3xl text-xl font-semibold text-[var(--primary-color)]">TrailBliss</h1>
             </nav>

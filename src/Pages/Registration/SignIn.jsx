@@ -55,6 +55,9 @@ function SignIn(){
         <label className="text-center customLabel">Password</label>
         <span onClick={()=>setShowPass(!showPass)} className="absolute right-5 top-[35%] text-[var(--primary-color)] cursor-pointer">{showPass? <FaEye size={20}/> : <TbEyeClosed size={20}/>}</span>
         </section>
+        <section className="mb-3 lg:w-5/12 md:w-10/12 w-full mx-auto">
+        <Link to="/reset" className="text-xs underline text-blue-600 font-bold italic"><span>Forgot your password <span className="text-red-600 text-sm no-underline">!!</span></span></Link>
+        </section>
         <section className="text-center">
         <button onClick={(e)=>handleSignIn(e)} className="px-6 py-2 bg-[var(--primary-color)] rounded-s-full rounded-e-full md:w-5/12 w-8/12 text-white">Sign In</button>
         </section>

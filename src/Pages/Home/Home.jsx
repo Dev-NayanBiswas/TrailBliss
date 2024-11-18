@@ -1,10 +1,9 @@
-import React from 'react'
-import Loading from '../../Components/Navbar/Loading'
+import Update from "../UpdatePage/Update"
 
 function Home() {
   return (
     <div>
-      <Loading/>
+        <Update/>
     </div>
   )
 }
