@@ -59,6 +59,27 @@
         "Listen to safety briefings carefully."
       ]
     },
+    
+  {
+    "id": "098",
+    "adventureTitle": "Sunset Camel Trek",
+    "image": "sunset-camel-trek.jpg",
+    "categoryName": "Desert Exploration",
+    "shortDescription": "Experience a stunning desert sunset during a serene camel trek.",
+    "adventureCost": 150,
+    "bookingAvailability": true,
+    "location": "Sahara Desert, Morocco",
+    "duration": "3 hours",
+    "adventureLevel": "Beginner",
+    "includedItems": ["Camel ride", "Local guide", "Refreshments"],
+    "ecoFriendlyFeatures": ["Plastic-free refreshments", "Solar-powered lighting", "Traditional eco-friendly camping methods"],
+    "maxGroupSize": 10,
+    "specialInstructions": [
+      "Wear a wide-brim hat and sunglasses.",
+      "Apply eco-friendly sunscreen.",
+      "Carry a lightweight scarf for sand protection."
+    ]
+  },
     {
       "id": "004",
       "adventureTitle": "Volcanic Hot Springs Retreat",
@@ -77,6 +98,206 @@
         "Bring a swimsuit and towel.",
         "Avoid entering springs with lotions or oils on your skin.",
         "Keep noise levels low to maintain tranquility."
+      ]
+    },
+    {
+      "id": "012578",
+      "adventureTitle": "Everest Base Camp Trek",
+      "image": "everest-base-camp.jpg",
+      "categoryName": "Mountain Treks",
+      "shortDescription": "A challenging trek to the base of the world's highest peak.",
+      "adventureCost": 1200,
+      "bookingAvailability": true,
+      "location": "Himalayas, Nepal",
+      "duration": "14 days",
+      "adventureLevel": "Advanced",
+      "includedItems": ["Guided trekking", "Meals and accommodations", "Permits"],
+      "ecoFriendlyFeatures": ["Eco-conscious lodges", "Leave-no-trace trekking", "Reusable trekking gear"],
+      "maxGroupSize": 12,
+      "specialInstructions": [
+        "Prepare for high-altitude conditions.",
+        "Pack layers for variable weather.",
+        "Carry eco-friendly toiletries."
+      ]
+    },
+    {
+      "id": "204",
+      "adventureTitle": "Stargazing Camping Retreat",
+      "image": "stargazing-camp.jpg",
+      "categoryName": "Camping Retreats",
+      "shortDescription": "Camp under the stars in a serene desert setting with professional stargazing equipment.",
+      "adventureCost": 200,
+      "bookingAvailability": true,
+      "location": "Atacama Desert, Chile",
+      "duration": "2 days",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Tent and sleeping gear", "Meals", "Stargazing guide"],
+      "ecoFriendlyFeatures": ["Eco-friendly camping gear", "Solar-powered lighting", "Leave-no-trace camping policy"],
+      "maxGroupSize": 15,
+      "specialInstructions": [
+        "Pack warm clothing for the night.",
+        "Bring a reusable mug and plate.",
+        "Avoid bright lights to preserve night vision."
+      ]
+    },
+    {
+      "id": "079",
+      "adventureTitle": "Overnight Desert Camp",
+      "image": "overnight-desert-camp.jpg",
+      "categoryName": "Desert Exploration",
+      "shortDescription": "Spend a magical night under the stars in a traditional desert camp.",
+      "adventureCost": 250,
+      "bookingAvailability": true,
+      "location": "Wadi Rum, Jordan",
+      "duration": "1 night",
+      "adventureLevel": "Intermediate",
+      "includedItems": ["Tented accommodation", "Dinner and breakfast", "Stargazing guide"],
+      "ecoFriendlyFeatures": ["Solar-powered tents", "Reusable utensils", "Biodegradable toiletries"],
+      "maxGroupSize": 15,
+      "specialInstructions": [
+        "Bring a reusable water bottle.",
+        "Pack light but warm clothing for the night.",
+        "Avoid leaving any trash behind."
+      ]
+    },
+    {
+      "id": "007549325",
+      "adventureTitle": "Seaside Meditation Retreat",
+      "image": "seaside-meditation.jpg",
+      "categoryName": "Relaxation",
+      "shortDescription": "Unwind with guided meditation sessions by the serene seaside.",
+      "adventureCost": 70,
+      "bookingAvailability": true,
+      "location": "Martha's Vineyard, USA",
+      "duration": "2 hours",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Yoga mat", "Meditation guide", "Herbal tea"],
+      "ecoFriendlyFeatures": ["Reusable equipment", "Zero-waste sessions", "Locally-grown refreshments"],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+        "Wear comfortable, loose-fitting clothing.",
+        "Turn off your phone or set it to silent mode.",
+        "Arrive 10 minutes early to settle in."
+      ]
+    },
+    {
+      "id": "0902",
+      "adventureTitle": "Mountain Waterfall Trail",
+      "image": "mountain-waterfall.jpg",
+      "categoryName": "Hiking",
+      "shortDescription": "Trek through lush mountain trails to discover serene waterfalls and vibrant flora.",
+      "adventureCost": 100,
+      "bookingAvailability": true,
+      "location": "Blue Mountains, Australia",
+      "duration": "6 hours",
+      "adventureLevel": "Intermediate",
+      "includedItems": ["Guided tour", "Trail map", "Lunch"],
+      "ecoFriendlyFeatures": ["No plastic policy", "Biodiversity conservation support", "Compostable meal packaging"],
+      "maxGroupSize": 12,
+      "specialInstructions": [
+        "Bring a rain jacket.",
+        "Pack a small daypack for essentials.",
+        "Wear sunscreen and a hat."
+      ]
+    },
+    {
+      "id": "013",
+      "adventureTitle": "Inca Trail to Machu Picchu",
+      "image": "inca-trail.jpg",
+      "categoryName": "Mountain Treks",
+      "shortDescription": "Explore ancient ruins on the iconic trail to Machu Picchu.",
+      "adventureCost": 950,
+      "bookingAvailability": true,
+      "location": "Andes Mountains, Peru",
+      "duration": "4 days",
+      "adventureLevel": "Intermediate",
+      "includedItems": ["Guided trek", "Camping equipment", "Meals"],
+      "ecoFriendlyFeatures": ["Permitted routes", "Eco-friendly waste disposal", "Local community support"],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+        "Train for steep inclines.",
+        "Use biodegradable soap.",
+        "Carry a refillable water bladder."
+      ]
+    },
+    {
+      "id": "01785",
+      "adventureTitle": "Sandboarding Adventure",
+      "image": "sandboarding.jpg",
+      "categoryName": "Desert Exploration",
+      "shortDescription": "Enjoy the thrill of sandboarding on towering desert dunes.",
+      "adventureCost": 100,
+      "bookingAvailability": false,
+      "location": "Namib Desert, Namibia",
+      "duration": "2 hours",
+      "adventureLevel": "Advanced",
+      "includedItems": ["Sandboard rental", "Safety gear", "Instructor guidance"],
+      "ecoFriendlyFeatures": ["Non-invasive activity", "Protective mats for minimal dune impact", "Eco-conscious transport"],
+      "maxGroupSize": 8,
+      "specialInstructions": [
+        "Wear lightweight, breathable clothing.",
+        "Bring a camera for spectacular shots.",
+        "Follow safety instructions closely."
+      ]
+    },
+    {
+      "id": "0045166",
+      "adventureTitle": "Forest Bathing Experience",
+      "image": "forest-bathing.jpg",
+      "categoryName": "Relaxation",
+      "shortDescription": "Immerse yourself in the calming embrace of nature with a guided forest bathing session.",
+      "adventureCost": 50,
+      "bookingAvailability": true,
+      "location": "Black Forest, Germany",
+      "duration": "3 hours",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Guided walk", "Comfortable seating mats", "Refreshments"],
+      "ecoFriendlyFeatures": ["No artificial lighting", "Reusable materials", "Support for local forest conservation"],
+      "maxGroupSize": 8,
+      "specialInstructions": [
+        "Wear sturdy walking shoes.",
+        "Avoid strong perfumes or scents.",
+        "Carry a reusable water bottle."
+      ]
+    },
+    {
+      "id": "018654",
+      "adventureTitle": "Kilimanjaro Summit Trek",
+      "image": "kilimanjaro-summit.jpg",
+      "categoryName": "Mountain Treks",
+      "shortDescription": "Reach the summit of Africa's highest peak.",
+      "adventureCost": 2000,
+      "bookingAvailability": true,
+      "location": "Mount Kilimanjaro, Tanzania",
+      "duration": "7 days",
+      "adventureLevel": "Advanced",
+      "includedItems": ["Guides and porters", "Park fees", "Meals"],
+      "ecoFriendlyFeatures": ["Eco-trained guides", "Sustainable trekking practices", "Eco-friendly accommodations"],
+      "maxGroupSize": 8,
+      "specialInstructions": [
+        "Pack high-altitude gear.",
+        "Stay hydrated to prevent altitude sickness.",
+        "Bring energy-packed snacks."
+      ]
+    },
+    {
+      "id": "405",
+      "adventureTitle": "Forest Wellness Retreat",
+      "image": "forest-retreat.jpg",
+      "categoryName": "Camping Retreats",
+      "shortDescription": "Reconnect with nature during a forest camping retreat featuring yoga and meditation sessions.",
+      "adventureCost": 250,
+      "bookingAvailability": true,
+      "location": "Black Forest, Germany",
+      "duration": "3 days",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Tent and sleeping bag", "Yoga instructor", "Plant-based meals"],
+      "ecoFriendlyFeatures": ["Zero waste cooking", "Compostable utensils", "Eco-friendly yoga mats"],
+      "maxGroupSize": 20,
+      "specialInstructions": [
+        "Bring comfortable yoga clothing.",
+        "Carry natural mosquito repellent.",
+        "Limit noise to respect the environment."
       ]
     },
     {
@@ -100,6 +321,126 @@
       ]
     },
     {
+      "id": "0156485",
+      "adventureTitle": "Mount Fuji Ascent",
+      "image": "mount-fuji-ascent.jpg",
+      "categoryName": "Mountain Treks",
+      "shortDescription": "Conquer Japan's iconic Mount Fuji.",
+      "adventureCost": 600,
+      "bookingAvailability": true,
+      "location": "Mount Fuji, Japan",
+      "duration": "2 days",
+      "adventureLevel": "Intermediate",
+      "includedItems": ["Guide services", "Trail permits", "Accommodations"],
+      "ecoFriendlyFeatures": ["Trash-free zones", "Local eco-friendly accommodations", "Reusable utensils for meals"],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+        "Start early to avoid crowds.",
+        "Bring a headlamp for night trekking.",
+        "Dress in layers for rapid temperature changes."
+      ]
+    },
+    {
+      "id": "04896207",
+      "adventureTitle": "Mountain Spa Escape",
+      "image": "mountain-spa.jpg",
+      "categoryName": "Relaxation",
+      "shortDescription": "Rejuvenate with spa treatments surrounded by tranquil mountain vistas.",
+      "adventureCost": 150,
+      "bookingAvailability": true,
+      "location": "Alpine Resort, Switzerland",
+      "duration": "4 hours",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Spa robe", "Access to thermal pools", "Herbal teas"],
+      "ecoFriendlyFeatures": ["Natural hot spring water", "Solar-heated facilities", "Organic spa products"],
+      "maxGroupSize": 12,
+      "specialInstructions": [
+        "Arrive 15 minutes early to check in.",
+        "Drink plenty of water before and after treatments.",
+        "Avoid heavy meals prior to spa sessions."
+      ]
+    },
+    {
+      "id": "008",
+      "adventureTitle": "Skydiving Over Coastal Cliffs",
+      "image": "skydiving-coastal-cliffs.jpg",
+      "categoryName": "Adventure Sports",
+      "shortDescription": "Experience the thrill of freefalling with breathtaking views of coastal cliffs and ocean waves.",
+      "adventureCost": 300,
+      "bookingAvailability": true,
+      "location": "Cape Town, South Africa",
+      "duration": "2 hours",
+      "adventureLevel": "Advanced",
+      "includedItems": ["Tandem jump instructor", "Safety gear", "Certificate of completion"],
+      "ecoFriendlyFeatures": ["Fuel-efficient aircraft", "Biodegradable materials for gear", "Support for local conservation programs"],
+      "maxGroupSize": 6,
+      "specialInstructions": [
+        "Wear comfortable, snug-fitting clothes.",
+        "Avoid heavy meals before the jump.",
+        "Listen carefully to the pre-jump briefing."
+      ]
+    },
+    {
+      "id": "0158961",
+      "adventureTitle": "4x4 Desert Safari",
+      "image": "desert-safari.jpg",
+      "categoryName": "Desert Exploration",
+      "shortDescription": "Embark on an exhilarating 4x4 safari across the vast desert landscape.",
+      "adventureCost": 180,
+      "bookingAvailability": true,
+      "location": "Dubai Desert, UAE",
+      "duration": "6 hours",
+      "adventureLevel": "Intermediate",
+      "includedItems": ["4x4 vehicle ride", "Guide and driver", "Refreshments"],
+      "ecoFriendlyFeatures": ["Eco-friendly vehicles", "Minimized off-road tracks", "Desert clean-up initiatives"],
+      "maxGroupSize": 6,
+      "specialInstructions": [
+        "Secure your belongings during the ride.",
+        "Wear sturdy shoes for optional walks.",
+        "Hydrate frequently and protect against the sun."
+      ]
+    },
+    {
+      "id": "706",
+      "adventureTitle": "Lakeside Camping Adventure",
+      "image": "lakeside-camp.jpg",
+      "categoryName": "Camping Retreats",
+      "shortDescription": "Enjoy fishing, kayaking, and campfire evenings by a picturesque lakeside.",
+      "adventureCost": 180,
+      "bookingAvailability": false,
+      "location": "Lake Tahoe, USA",
+      "duration": "2 days",
+      "adventureLevel": "Intermediate",
+      "includedItems": ["Tent setup", "Fishing gear", "Kayak rentals"],
+      "ecoFriendlyFeatures": ["Biodegradable soap for washing", "No single-use plastics", "Nature conservation awareness sessions"],
+      "maxGroupSize": 12,
+      "specialInstructions": [
+        "Wear waterproof shoes.",
+        "Bring a flashlight with rechargeable batteries.",
+        "Adhere to fishing regulations."
+      ]
+    },
+    {
+      "id": "01452366",
+      "adventureTitle": "Rocky Mountain Highline Trek",
+      "image": "rocky-mountain-trek.jpg",
+      "categoryName": "Mountain Treks",
+      "shortDescription": "Experience breathtaking views on a high-altitude trek.",
+      "adventureCost": 700,
+      "bookingAvailability": true,
+      "location": "Rocky Mountains, USA",
+      "duration": "5 days",
+      "adventureLevel": "Intermediate",
+      "includedItems": ["Guided trek", "Camping gear", "Meals"],
+      "ecoFriendlyFeatures": ["Low-impact campsites", "Leave-no-trace policies", "Biodegradable supplies"],
+      "maxGroupSize": 12,
+      "specialInstructions": [
+        "Train for moderate inclines.",
+        "Bring trekking poles for stability.",
+        "Carry lightweight, durable gear."
+      ]
+    },
+    {
       "id": "006",
       "adventureTitle": "Desert Exploration Trek",
       "image": "desert-exploration.jpg",
@@ -120,6 +461,106 @@
       ]
     },
     {
+      "id": "019",
+      "adventureTitle": "Whitewater Rafting in Zambezi River",
+      "image": "zambezi-rafting.jpg",
+      "categoryName": "Water Adventures",
+      "shortDescription": "Experience the thrill of Grade 5 rapids in the iconic Zambezi River.",
+      "adventureCost": 300,
+      "bookingAvailability": true,
+      "location": "Victoria Falls, Zimbabwe",
+      "duration": "Full day",
+      "adventureLevel": "Advanced",
+      "includedItems": ["Rafting gear", "Safety briefing", "Lunch"],
+      "ecoFriendlyFeatures": ["Sustainable tour practices", "Minimal waste packaging", "Local guide employment"],
+      "maxGroupSize": 8,
+      "specialInstructions": [
+        "Prepare for intense physical activity.",
+        "Bring extra dry clothes.",
+        "Ensure secure footwear."
+      ]
+    },
+    {
+      "id": "0557",
+      "adventureTitle": "Highland Wilderness Camp",
+      "image": "highland-camp.jpg",
+      "categoryName": "Camping Retreats",
+      "shortDescription": "Escape to the highlands for a rugged camping experience amidst breathtaking landscapes.",
+      "adventureCost": 220,
+      "bookingAvailability": true,
+      "location": "Scottish Highlands, UK",
+      "duration": "3 days",
+      "adventureLevel": "Advanced",
+      "includedItems": ["Guide services", "Campfire meals", "Hiking equipment"],
+      "ecoFriendlyFeatures": ["Wildlife-safe camping spots", "Recyclable waste collection", "Water purification system"],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+        "Carry durable hiking boots.",
+        "Pack layers for varying weather.",
+        "Respect wildlife and follow local regulations."
+      ]
+    },
+    {
+      "id": "025480",
+      "adventureTitle": "Dolphin Watching and Sailing",
+      "image": "dolphin-sailing.jpg",
+      "categoryName": "Water Adventures",
+      "shortDescription": "Sail the open seas and watch dolphins in their natural habitat.",
+      "adventureCost": 120,
+      "bookingAvailability": true,
+      "location": "Lisbon Coast, Portugal",
+      "duration": "4 hours",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Boat tour", "Snacks", "Marine guide"],
+      "ecoFriendlyFeatures": ["Electric-powered boats", "Educational talks on conservation", "No disturbance to marine life"],
+      "maxGroupSize": 15,
+      "specialInstructions": [
+        "Bring binoculars for better views.",
+        "Use reef-safe sunscreen.",
+        "Carry a lightweight jacket."
+      ]
+    },
+    {
+      "id": "0803",
+      "adventureTitle": "Desert Oasis Trek",
+      "image": "desert-oasis.jpg",
+      "categoryName": "Hiking",
+      "shortDescription": "Hike across golden sands to a hidden desert oasis surrounded by native wildlife.",
+      "adventureCost": 140,
+      "bookingAvailability": false,
+      "location": "Sahara Desert, Morocco",
+      "duration": "8 hours",
+      "adventureLevel": "Advanced",
+      "includedItems": ["Local guide", "Camelback water supply", "Traditional meal"],
+      "ecoFriendlyFeatures": ["Wildlife-friendly trekking routes", "Use of renewable energy", "Biodegradable trail markers"],
+      "maxGroupSize": 8,
+      "specialInstructions": [
+        "Wear lightweight, breathable clothing.",
+        "Carry high-SPF sunscreen.",
+        "Stay hydrated throughout the trek."
+      ]
+    },
+    {
+      "id": "02548621",
+      "adventureTitle": "Stand-Up Paddleboarding in Maui",
+      "image": "maui-paddleboarding.webp",
+      "categoryName": "Water Adventures",
+      "shortDescription": "Glide over crystal-clear waters while enjoying Maui’s stunning coastal scenery.",
+      "adventureCost": 100,
+      "bookingAvailability": true,
+      "location": "Maui, Hawaii, USA",
+      "duration": "3 hours",
+      "adventureLevel": "Beginner",
+      "includedItems": ["Paddleboard rental", "Life jacket", "Instructor"],
+      "ecoFriendlyFeatures": ["Plastic-free operations", "Support for local conservation programs", "Eco-friendly gear"],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+        "Wear sunscreen and a hat.",
+        "Practice balancing before heading out.",
+        "Carry a dry bag for personal items."
+      ]
+    },
+    {
       "id": "007",
       "adventureTitle": "Mangrove Forest Expeditions",
       "image": "mangrove-expedition.jpg",
@@ -137,6 +578,26 @@
         "Wear water-resistant clothing.",
         "Do not litter during the trip.",
         "Stay close to the group."
+      ]
+    },
+    {
+      "id": "02879651",
+      "adventureTitle": "Scuba Diving in the Maldives",
+      "image": "maldives-scuba.jpg",
+      "categoryName": "Water Adventures",
+      "shortDescription": "Dive into crystal-clear waters and explore vibrant coral reefs.",
+      "adventureCost": 400,
+      "bookingAvailability": true,
+      "location": "Maldives",
+      "duration": "2 hours",
+      "adventureLevel": "Advanced",
+      "includedItems": ["Scuba gear", "Dive guide", "Underwater photos"],
+      "ecoFriendlyFeatures": ["Reef-safe diving practices", "Eco-certified instructors", "Marine conservation efforts"],
+      "maxGroupSize": 6,
+      "specialInstructions": [
+        "Bring your dive certification card.",
+        "Avoid touching coral or marine animals.",
+        "Maintain buoyancy control to protect the environment."
       ]
     }
   ]

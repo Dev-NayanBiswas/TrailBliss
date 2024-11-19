@@ -28,18 +28,18 @@ function PackageDetails() {
     
   return (
     <>
-    <section className="relative h-[160vh] md:h-[140vh] lg:h-[95vh] w-full rounded-t-lg my-10">
+    <section className="relative h-[170vh] md:h-[140vh] lg:h-[95vh] w-full rounded-t-lg my-10">
       <section
         className="rounded-t-lg absolute inset-0 bg-cover transform -scale-y-100 rotate-180"
         style={{
             backgroundImage:`url(${ImageUploader(image)})`,
           }}
       ></section>
-      <section className="absolute z-10 inset-0 bg-black/55 bg-opacity-85 lg:h-full h-[160vh] md:h-[140vh] rounded-t-lg"></section>
+      <section className="absolute z-10 inset-0 bg-black/55 bg-opacity-85 lg:h-full h-[170vh] md:h-[140vh] rounded-t-lg"></section>
       <section className="relative h-full flex lg:flex-row flex-col justify-between lg:px-10 py-3 items-center text-left rounded-t-lg">
         <figure className="z-10 lg:my-5 float-left h-full lg:-ml-6 rounded-t-lg">
             <img className="w-[335px] lg:h-full md:h-[335px] md:w-[600px] float-left bg-green-400 aspect-[1/1.1] lg:aspect-[1/2.2] 
-    rounded-lg shadow-lg lg:object-cover object-cover object-left lg:object-[20%_30%] 
+    rounded-lg shadow-lg lg:object-cover md:object-cover md:object-left object-cover lg:object-[20%_30%] 
     [clip-path:circle(80%_at_20%_10%)] 
     [shape-outside:circle(70%_at_20%_30%)]
     md:[clip-path:polygon(0%_0%,100%_0%,75%_100%,0%_100%)]
