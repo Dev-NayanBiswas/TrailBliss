@@ -2,7 +2,7 @@
     {
       "id": "001",
       "adventureTitle": "Rainforest Canopy Walk",
-      "image": "https://example.com/images/rainforest-canopy.jpg",
+      "image": "rainforest-canopy.jpg",
       "categoryName": "Hiking",
       "shortDescription": "Explore the stunning views from the treetop canopy walk in a pristine rainforest.",
       "adventureCost": 120,
@@ -22,7 +22,7 @@
     {
       "id": "002",
       "adventureTitle": "Coral Reef Snorkeling",
-      "image": "https://example.com/images/coral-reef-snorkeling.jpg",
+      "image": "coral-reef-snorkeling.jpg",
       "categoryName": "Water Adventures",
       "shortDescription": "Discover vibrant marine life in one of the world's largest coral reefs.",
       "adventureCost": 75,
@@ -42,7 +42,7 @@
     {
       "id": "003",
       "adventureTitle": "Desert Sandboarding",
-      "image": "https://example.com/images/desert-sandboarding.jpg",
+      "image": "desert-sandboarding.avif",
       "categoryName": "Adventure Sports",
       "shortDescription": "Glide down golden dunes and experience the thrill of sandboarding.",
       "adventureCost": 50,
@@ -62,7 +62,7 @@
     {
       "id": "004",
       "adventureTitle": "Volcanic Hot Springs Retreat",
-      "image": "https://example.com/images/volcanic-hot-springs.jpg",
+      "image": "volcanic-hot-springs.jpg",
       "categoryName": "Relaxation",
       "shortDescription": "Relax in natural volcanic hot springs surrounded by lush greenery.",
       "adventureCost": 90,
@@ -82,7 +82,7 @@
     {
       "id": "005",
       "adventureTitle": "Wildlife Safari by Electric Jeep",
-      "image": "https://example.com/images/wildlife-safari.jpg",
+      "image": "wildlife-safari.avif",
       "categoryName": "Wildlife",
       "shortDescription": "Observe exotic wildlife on a sustainable safari using electric jeeps.",
       "adventureCost": 150,
@@ -102,7 +102,7 @@
     {
       "id": "006",
       "adventureTitle": "Desert Exploration Trek",
-      "image": "https://example.com/images/desert-exploration.jpg",
+      "image": "desert-exploration.jpg",
       "categoryName": "Adventure Sports",
       "shortDescription": "Embark on a guided trek through dramatic desert landscapes.",
       "adventureCost": 100,
@@ -122,7 +122,7 @@
     {
       "id": "007",
       "adventureTitle": "Mangrove Forest Expeditions",
-      "image": "https://example.com/images/mangrove-expedition.jpg",
+      "image": "mangrove-expedition.jpg",
       "categoryName": "Wildlife",
       "shortDescription": "Navigate through serene mangroves and spot rare bird species.",
       "adventureCost": 85,

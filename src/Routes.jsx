@@ -13,11 +13,13 @@ import Update from "./Pages/UpdatePage/Update";
 import ForgotPass from "./Pages/Home/ForgotPass/ForgotPass";
 import AllCards from "./Pages/Home/AllCards";
 import CategoryWiseCards from "./Pages/Home/CategoryWiseCards";
+import PackageDetails from "./Pages/Details/PackageDetails";
 
 const Routes = createBrowserRouter([
     {
         path:"/",
         element:<MainLayout/>,
+        loader:()=>fetch("../adventure.json"),
         errorElement:<ErrorPage/>,
         children:[
             {
@@ -26,7 +28,7 @@ const Routes = createBrowserRouter([
                 loader:()=>fetch("../adventure.json"),
                 children:[
                     {
-                        path:"/",
+                        index:true,
                         element:<AllCards/>
                     },
                     {
@@ -56,6 +58,12 @@ const Routes = createBrowserRouter([
             {
                 path:"reset",
                 element:<ForgotPass/>
+            },
+            {
+                path:"details/:ID",
+                element:<SecuredRoute>
+                    <PackageDetails/>
+                </SecuredRoute>
             },
             {
                 path:"registration",

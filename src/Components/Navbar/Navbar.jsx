@@ -1,6 +1,6 @@
 import { LuMenu } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useLocation } from "react-router-dom"
 import Search from "./Search"
 import DropDown from "./DropDown"
 import { useContext, useState } from "react";
@@ -9,6 +9,7 @@ import Avatar from "./Avatar";
 import { AuthContext } from "../../Utilities/Scripts/AllContext";
 
 function Navbar(){
+    const location = useLocation()
     const {userData} = useContext(AuthContext);
     const [showDrop, setShowDrop] = useState(false);
   return (
@@ -21,7 +22,7 @@ function Navbar(){
                 <h1 className="md:text-3xl text-xl font-semibold text-[var(--primary-color)]">TrailBliss</h1>
             </nav>
             <nav className="w-full hidden gap-4 justify-center lg:flex">
-                <NavLink to="/" className={({isActive})=>isActive? "active":"inactive"}>Home</NavLink>
+                <NavLink to="/" className={({isActive})=>isActive || location.pathname.includes("/categoryWiseCards")? "active":"inactive"}>Home</NavLink>
                 <NavLink to="/aboutUs" className={({isActive})=>isActive? "active":"inactive"}>About Us</NavLink>
                 <NavLink to="/contactUs" className={({isActive})=>isActive? "active":"inactive"}>Contact Us</NavLink>
                 <NavLink to="/portfolio" className={({isActive})=>isActive? "active":"inactive"}>Portfolio</NavLink>
