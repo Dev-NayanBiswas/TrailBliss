@@ -12,23 +12,31 @@ import { RxCross2 } from "react-icons/rx";
 import { BsCoin } from "react-icons/bs";
 import ImageUploader from "../../Utilities/Scripts/ImageUploader";
 import { useEffect, useState } from "react";
+import useAppointment from "../../Utilities/Scripts/useAppointment";
+import Modal from "../../Components/Modal";
 
-function PackageDetails() {
+function PackageDetails(){
+  const [scheduleData,settingAppointment] = useAppointment();
+  const [showModal, setShowModal] = useState(false)
     const [card, setCard] = useState({})
     const {ID} = useParams();
     const [data] = useOutletContext();
     useEffect(()=>{
-            console.log(data);
-            console.log(ID)
             const findTheCard = data?.find(item=>item.id === ID);
-            setCard(findTheCard)
-    },[ID])
+            setCard(findTheCard);
+            if(!scheduleData.isAvailable){
+              setShowModal(true);
+            }
+    },[ID,scheduleData])
 
           const {adventureTitle,ecoFriendlyFeatures,image,categoryName,shortDescription,adventureCost,bookingAvailability,location,duration,adventureLevel,includedItems,maxGroupSize,specialInstructions} = card || {}
-    
+
+
+    console.log(scheduleData)
   return (
     <>
-    <section className="relative h-[170vh] md:h-[140vh] lg:h-[95vh] w-full rounded-t-lg my-10">
+    
+    <section className="relative h-[170vh] md:h-[140vh] lg:h-[102vh] w-full rounded-t-lg my-10">
       <section
         className="rounded-t-lg absolute inset-0 bg-cover transform -scale-y-100 rotate-180"
         style={{
@@ -38,7 +46,7 @@ function PackageDetails() {
       <section className="absolute z-10 inset-0 bg-black/55 bg-opacity-85 lg:h-full h-[170vh] md:h-[140vh] rounded-t-lg"></section>
       <section className="relative h-full flex lg:flex-row flex-col justify-between lg:px-10 py-3 items-center text-left rounded-t-lg">
         <figure className="z-10 lg:my-5 float-left h-full lg:-ml-6 rounded-t-lg">
-            <img className="w-[335px] lg:h-full md:h-[335px] md:w-[600px] float-left bg-green-400 aspect-[1/1.1] lg:aspect-[1/2.2] 
+            <img className="w-[335px] lg:h-full md:h-[335px] md:w-[600px] float-left aspect-[1/1.1] lg:aspect-[1/2.2] 
     rounded-lg shadow-lg lg:object-cover md:object-cover md:object-left object-cover lg:object-[20%_30%] 
     [clip-path:circle(80%_at_20%_10%)] 
     [shape-outside:circle(70%_at_20%_30%)]
@@ -79,11 +87,20 @@ function PackageDetails() {
                 specialInstructions?.map((item,index)=><li className="rounded-tl-full w-fit rounded-e-full tracking-wide bg-red-600/35 px-4" key={index}>{item}</li>)
             }
         </ul>
-        <button className="border-[2px] tracking-wide border-[var(--primary-color)] hover:bg-[var(--primary-color)] text-[var(--primary-color)] hover:text-white font-semibold px-8 py-2 rounded-e-full rounded-s-full hover:shadow-md btn_anim flex justify-center items-center gap-4">
+        <button
+          onClick={()=>settingAppointment(card)}
+         className="border-[2px] tracking-wide border-[var(--primary-color)] hover:bg-[var(--primary-color)] text-[var(--primary-color)] hover:text-white font-semibold px-8 py-2 rounded-e-full rounded-s-full hover:shadow-md btn_anim flex justify-center items-center gap-4">
           Talk with Expert <HiOutlineChatBubbleLeftRight size={30}/>
         </button>
         </section>
       </section>
+    </section>
+    <section className="">
+                {
+                  showModal ?
+                  <Modal appData={scheduleData} onClose={()=>setShowModal(false)}/> 
+                   :""
+                }
     </section>
     </>
   )

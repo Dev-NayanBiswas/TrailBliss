@@ -53,7 +53,9 @@ const Routes = createBrowserRouter([
             },
             {
                 path:"updatePage",
-                element:<Update/>
+                element:<SecuredRoute>
+                    <Update/>
+                </SecuredRoute>
             },
             {
                 path:"reset",

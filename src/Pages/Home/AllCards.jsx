@@ -4,7 +4,6 @@ import AdventureCard from '../../Components/AdventureCard'
 
 function AllCards() {
     const [data] = useOutletContext()
-    console.log(data)
   return (
     <>
         <section className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 ">

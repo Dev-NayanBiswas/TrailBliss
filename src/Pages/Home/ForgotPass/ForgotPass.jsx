@@ -41,7 +41,7 @@ function ForgotPass(){
                 <img src={ImageUploader("PassReset.png")} alt='' className="h-full w-full object-cover object-center" />
               </figure>
               <h4 className="text-3xl font-semibold text-gray-600/65">Forgot Password</h4>
-              <p className="text-sm w-3/12 mx-auto">
+              <p className="text-sm lg:w-3/12 md:w-6/12 w-11/12 mx-auto">
                 Enter your email and we will send you a link to reset your
                 Password
               </p>

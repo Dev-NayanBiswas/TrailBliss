@@ -19,7 +19,6 @@ function SignIn(){
   })
   const location = useLocation();
   const navigate = useNavigate();
-  console.log(location)
   
   function handleSubmit(e){
     e.preventDefault();
