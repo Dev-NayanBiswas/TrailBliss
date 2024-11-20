@@ -24,6 +24,7 @@
     font-family: "Raleway", sans-serif;
     scroll-behavior: smooth;
   }
+
   .customLabel{
     @apply transition-all duration-300 absolute left-[10px] md:-top-[20%] -top-[10%] peer-placeholder-shown:top-[30%] font-semibold text-lg text-gray-800/45
   }

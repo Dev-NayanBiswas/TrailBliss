@@ -39,7 +39,7 @@ function Portfolio(){
             </section> :
               <section className="text-left text-4xl font-bold text-[var(--primary-color)]">
               <h1 className="mt-10 text-2xl">Appointments</h1>
-                <div className="border-b-[1px] border-[var(--primary-color)] h-0.5 md:w-8/12 w-full my-"></div>
+                <div className="border-b-[1px] border-[var(--primary-color)] h-0.5 md:w-8/12 w-full my-4"></div>
               <section className="flex flex-col gap-4">
                 {
                   appoint?.map(app=><AppointmentCards key={app.id} appInfo={app}/>)

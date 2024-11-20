@@ -1,6 +1,7 @@
 import React from 'react'
 import { Outlet, useLoaderData } from 'react-router-dom'
 import Navbar from './Components/Navbar/Navbar'
+import Footer from './Components/Footer'
 
 function MainLayout(){
   const data = useLoaderData()
@@ -16,7 +17,7 @@ function MainLayout(){
         <Outlet context={[data]}/>
     </main>
     <footer className="w-11/12 mx-auto">
-        Footer Section
+        <Footer/>
     </footer>
     </>
   )
