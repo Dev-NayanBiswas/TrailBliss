@@ -1,12 +1,12 @@
 import React from 'react'
 import { useOutletContext } from 'react-router-dom'
-import ImageUploader from '../../Utilities/Scripts/ImageUploader';
 import GalleryCarousel from './GalleryCarousel';
+import dynamicTitle from '../../Utilities/Scripts/dynamicTitle';
 
 function Galleries(){
+    dynamicTitle()
     const [data] = useOutletContext();
     const carouselData = data?.flatMap(({image,id})=>({id:id,images:image}));
-    console.log(carouselData)
   return (
     <>
     <section className="my-6">
@@ -14,7 +14,7 @@ function Galleries(){
         <p className="text-sm my-3 italic font-semibold text-gray-700/85 w-9/12 tracking-wider">Memories of eco-friendly adventures are nature's whispers etched in our hearts, <br /> reminding us that the greatest journeys leave only footprints and take only inspiration.</p>
     <div className="h-0.5 border-b-[1px] md:w-5/12 w-full border-[var(--primary-color)] mb-3"></div>
     </section>
-        <section className="md:grid lg:grid-cols-3 md:grid-cols-2 flex flex-col gap-4">
+        <section data-aos="fade-up" className="md:grid lg:grid-cols-3 md:grid-cols-2 flex flex-col gap-4">
             <section className='col-span-2 overflow-hidden'>
             <GalleryCarousel side={false} cards={2} data={carouselData.slice(0,10)}/>
             </section>

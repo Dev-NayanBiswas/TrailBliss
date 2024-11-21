@@ -14,8 +14,10 @@ import ImageUploader from "../../Utilities/Scripts/ImageUploader";
 import { useEffect, useState } from "react";
 import useAppointment from "../../Utilities/Scripts/useAppointment";
 import Modal from "../../Components/Modal";
+import dynamicTitle from "../../Utilities/Scripts/dynamicTitle";
 
 function PackageDetails(){
+  dynamicTitle()
   const [scheduleData,settingAppointment] = useAppointment();
   const [showModal, setShowModal] = useState(false)
     const [card, setCard] = useState({})
@@ -34,8 +36,15 @@ function PackageDetails(){
 
   return (
     <>
+    <section>
+      <section>
+        <h1 className="md:text-5xl text-3xl font-semibold text-[var(--primary-color)] lg:text-left text-center">Adventure Details</h1>
+        <p className="md:text-lg text-sm font-semibold tracking-wide text-gray-700/45 lg:w-7/12 w-full px-2">Every adventure holds a story—discover the details that make it unforgettable</p>
+        <div className="h-0.5 border-b-[1px] border-[var(--primary-color)] md:w-8/12 w-11/12 my-5"></div>
+      </section>
+    </section>
     
-    <section className="relative h-[170vh] md:h-[140vh] lg:h-[102vh] w-full rounded-t-lg my-10">
+    <section data-aos="zoom-in-up" className="relative h-[170vh] md:h-[140vh] lg:h-[102vh] w-full rounded-t-lg my-10">
       <section
         className="rounded-t-lg absolute inset-0 bg-cover transform -scale-y-100 rotate-180"
         style={{

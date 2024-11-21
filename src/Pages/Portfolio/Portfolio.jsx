@@ -2,8 +2,10 @@ import { useContext, useEffect, useState } from "react"
 import { AppointmentContext, AuthContext } from "../../Utilities/Scripts/AllContext"
 import { Link } from "react-router-dom";
 import AppointmentCards from "../../Components/AppointmentCards";
+import dynamicTitle from "../../Utilities/Scripts/dynamicTitle";
 
 function Portfolio(){
+  dynamicTitle()
   const {appoint,setUserWiseData,userWiseData} = useContext(AppointmentContext);
   const {userData,signOutUser,admin} = useContext(AuthContext);
   const{displayName,email,photoURL} = userData || {}

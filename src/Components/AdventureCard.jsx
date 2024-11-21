@@ -8,7 +8,8 @@ function AdventureCard({card}) {
 
   return (
     <>
-      <section className='rounded-b-lg shadow-md overflow-hidden'>
+      <section data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom" className='rounded-b-lg shadow-md overflow-hidden'>
         <figure className='overflow-hidden'>
           <img
             src={ImageUploader(image)}

@@ -28,9 +28,9 @@ function Avatar(){
                         <section onMouseLeave={()=>setShowOptions(false)} className="lg:absolute right-[45%] h-fit  bg-white lg:shadow-xl flex lg:flex-col flex-row gap-3 p-2 lg:w-[8vw] w-full justify-center items-center rounded-sm mx-auto text-center">
                             <p className="text-sm font-semibold italic text-blue-600 text-[var(--primary-color)] lg:w-full px-5 py-1 border border-[var(--primary-color)] btn_anim">{nameShort}</p>
                             <button onClick={signOutUser} className="text-white w-full px-5 py-1 bg-[var(--primary-color)] btn_anim whitespace-nowrap">Sign out</button>
-                        <Link to="/updatePage">
-                        <button className="text-[var(--primary-color)] w-full px-5 py-1 border border-[var(--primary-color)] btn_anim tracking-widest lg:w-[137px]">Update</button>
-                        </Link>
+                        
+                        <button className="text-[var(--primary-color)] border border-[var(--primary-color)] btn_anim whitespace-nowrap py-1 px-5 w-full"><Link to="/updatePage">Update</Link></button>
+                        
                         
                     </section> : ""
                     }

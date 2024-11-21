@@ -2,6 +2,7 @@ import Marquee from "react-fast-marquee";
 import ImageUploader from "../Utilities/Scripts/ImageUploader"
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
+import toastAlert from "../Utilities/Scripts/toastify";
 
 function CategoryMarquee(){
     const [allCategories, setAllCategories] = useState([]);
@@ -17,7 +18,7 @@ function CategoryMarquee(){
                     setAllCategories(categories)
                 }
             }catch(error){
-                console.error(error.message)
+                toastAlert("error",`${error.message}`)
             }
         })()
     },[])

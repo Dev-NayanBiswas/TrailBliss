@@ -63,7 +63,7 @@ function ForgotPass(){
                 </section>
                 <section className="text-center mx-auto flex justify-center items-center gap-3 ">
                 <Link onClick={goBack} className="whitespace-nowrap bg-blue-600 px-6 py-2 rounded-s-full rounded-e-full text-white"><button className="">Go Back</button></Link>
-            <button onClick={handleSendRestPassEmail} type="submit" className="px-6 py-2 bg-[var(--primary-color)] rounded-s-full rounded-e-full text-white">Confirm Email</button>
+            <button onClick={handleSendRestPassEmail} type="submit" className="px-7 py-2 bg-[var(--primary-color)] rounded-s-full rounded-e-full text-white">Reset</button>
             </section>
               </form>
             </section>

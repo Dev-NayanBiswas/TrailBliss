@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom";
 import ImageUploader from "../../Utilities/Scripts/ImageUploader";
 import { AuthContext } from "../../Utilities/Scripts/AllContext";
 import toastAlert from "../../Utilities/Scripts/toastify";
+import dynamicTitle from "../../Utilities/Scripts/dynamicTitle";
 
 function Update() {
+  dynamicTitle()
     const navigate = useNavigate();
     const {updateUserProfile} = useContext(AuthContext);
     const [updateData, setUpdateData] = useState({

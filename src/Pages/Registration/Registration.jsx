@@ -1,6 +1,8 @@
 import { Outlet } from 'react-router-dom'
+import dynamicTitle from '../../Utilities/Scripts/dynamicTitle'
 
 function Registration() {
+  dynamicTitle()
   return (
     <>
     <header className="min-h-[20vh] bg-green-100/10 py-5 px-2 rounded-ss-2xl rounded-ee-2xl shadow-sm">

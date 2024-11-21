@@ -2,9 +2,18 @@ import React from 'react'
 import { Outlet, useLoaderData } from 'react-router-dom'
 import Navbar from './Components/Navbar/Navbar'
 import Footer from './Components/Footer'
+import Aos from 'aos'
+import 'aos/dist/aos.css';
+
 
 function MainLayout(){
   const data = useLoaderData()
+  Aos.init({
+    offset: 200,
+    duration: 500,
+    easing: 'ease-in-sine',
+    delay: 100,
+  });
   return (
     <>
     <header>
