@@ -2,8 +2,6 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 import MainLayout from "./MainLayout";
 import ErrorPage from "./Pages/ErrorElements/ErrorPage";
 import Home from "./Pages/Home/Home";
-import AboutUs from "./Pages/AboutUs/AboutUs";
-import ContactUs from "./Pages/ContactUs/ContactUs";
 import Portfolio from "./Pages/Portfolio/Portfolio";
 import Registration from "./Pages/Registration/Registration";
 import SignUp from "./Pages/Registration/SignUp";
@@ -14,6 +12,7 @@ import ForgotPass from "./Pages/Home/ForgotPass/ForgotPass";
 import AllCards from "./Pages/Home/AllCards";
 import CategoryWiseCards from "./Pages/Home/CategoryWiseCards";
 import PackageDetails from "./Pages/Details/PackageDetails";
+import Galleries from "./Pages/Gallery/Galleries";
 
 const Routes = createBrowserRouter([
     {
@@ -38,12 +37,8 @@ const Routes = createBrowserRouter([
                 ]
             },
             {
-                path:"aboutUs",
-                element:<AboutUs/>
-            },
-            {
-                path:"contactUs",
-                element:<ContactUs/>
+                path:"gallery",
+                element:<Galleries/>
             },
             {
                 path:"portfolio",
@@ -58,7 +53,7 @@ const Routes = createBrowserRouter([
                 </SecuredRoute>
             },
             {
-                path:"reset",
+                path:"/reset/:value?",
                 element:<ForgotPass/>
             },
             {

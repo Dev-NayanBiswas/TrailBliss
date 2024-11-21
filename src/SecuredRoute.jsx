@@ -14,7 +14,6 @@ function SecuredRoute({children}){
     if(userData?.email){
         return children
     }
-    console.log(location)
   return <Navigate state={location.pathname} to={"/registration/signIn"}/>
 }
 export default SecuredRoute

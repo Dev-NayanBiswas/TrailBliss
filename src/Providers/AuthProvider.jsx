@@ -11,8 +11,10 @@ import {
   sendPasswordResetEmail,
   updateProfile
   } from "firebase/auth";
+import toastAlert from "../Utilities/Scripts/toastify";
 
 function AuthProvider({children}){
+  const admin = "ami@dmin.com"
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true)
 
@@ -53,7 +55,10 @@ function AuthProvider({children}){
     function signOutUser(){
       setLoading(true)
       signOut(auth)
-      setUserData(null)
+      .then(()=>{
+        setUserData(null)
+        toastAlert("info","You Signed Out")
+      })
     }
 
     //! Observer 
@@ -61,8 +66,6 @@ function AuthProvider({children}){
       const subscriber = onAuthStateChanged(auth,(currentUser)=>{
         setUserData(currentUser)
         setLoading(false)
-        console.log(currentUser)
-
         return ()=>{
           subscriber()
         }
@@ -72,6 +75,7 @@ function AuthProvider({children}){
     
 
     const authObject = {
+      admin,
       loading,
       userData,
       googleLogin,

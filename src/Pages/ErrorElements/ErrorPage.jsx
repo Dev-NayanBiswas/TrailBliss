@@ -3,7 +3,6 @@ import { Link, useNavigate, useRouteError } from "react-router-dom";
 function ErrorPage(){
   const navigate = useNavigate()
     const error = useRouteError();
-    console.log(error.error.message)
   return (
     <>
       <section className="h-screen w-full bg-white/45 text-white/20 flex justify-center items-center">

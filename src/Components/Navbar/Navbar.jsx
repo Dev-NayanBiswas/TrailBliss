@@ -1,7 +1,6 @@
 import { LuMenu } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
 import { Link, NavLink, useLocation } from "react-router-dom"
-import Search from "./Search"
 import DropDown from "./DropDown"
 import { useContext, useState } from "react";
 import trailBliss from "../../assets/logo.webp"
@@ -14,7 +13,7 @@ function Navbar(){
     const [showDrop, setShowDrop] = useState(false);
   return (
     <>
-        <nav className="flex justify-between items-center relative h-[10vh] w-full mx-auto lg:px-2 px-5">
+        <nav className="flex justify-between items-center relative h-[10vh] w-full mx-auto lg:px-2 px-5 bg-[#f8fdef]">
             <nav className="w-full flex justify-start items-center gap-1">
                 <figure className="md:h-14 h-7 rounded-full">
                     <img className="h-full w-full object-cover -scale-x-100 -rotate-12 rounded-full" src={trailBliss} alt="" />
@@ -23,9 +22,9 @@ function Navbar(){
             </nav>
             <nav className="w-full hidden gap-4 justify-center lg:flex">
                 <NavLink to="/" className={({isActive})=>isActive || location.pathname.includes("/categoryWiseCards")? "active":"inactive"}>Home</NavLink>
-                <NavLink to="/aboutUs" className={({isActive})=>isActive? "active":"inactive"}>About Us</NavLink>
-                <NavLink to="/contactUs" className={({isActive})=>isActive? "active":"inactive"}>Contact Us</NavLink>
-                <NavLink to="/portfolio" className={({isActive})=>isActive? "active":"inactive"}>Portfolio</NavLink>
+                <NavLink to="/gallery" className={({isActive})=>isActive? "active":"inactive"}>Gallery</NavLink>
+                <NavLink to="/updatePage" className={({isActive})=>isActive? "active":"inactive"}>Update Profile</NavLink>
+                <NavLink to="/portfolio" className={({isActive})=>isActive? "active":"inactive"}>My Profile</NavLink>
                 <NavLink to="/registration" className={({isActive})=>isActive? "active":"inactive"}>Registration</NavLink>
             </nav>
             <nav className="w-full flex justify-end items-center gap-4">
@@ -43,7 +42,7 @@ function Navbar(){
                 </section>
             </nav>
         </nav>
-            <section className={`${showDrop? 'h-[50vh]':"h-0"} transition-[height] overflow-hidden ease-linear duration-500 lg:hidden`}>
+            <section className={`${showDrop? 'h-[60vh]':"h-0"} transition-[height] overflow-hidden ease-linear duration-500 lg:hidden z-30`}>
                 <DropDown/>
             </section>
 

@@ -20,7 +20,7 @@ function Footer() {
     <section className="flex gap-2 items-center">
         <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F" target="_blank"><FaFacebook size={30} fill="#1877F2"/></a>
         <a href="https://github.com/Dev-NayanBiswas" target="_blank"><RiGithubFill size={30} /></a>
-        <a href="www.linkedin.com/in/nayan-biswas1996" target="_blank"><FaLinkedinIn size={30} fill="#1877F2"/></a>
+        <a href="https://www.linkedin.com/in/nayan-biswas1996/" target="_blank"><FaLinkedinIn size={30} fill="#1877F2"/></a>
     </section>
   </aside>
   <nav>

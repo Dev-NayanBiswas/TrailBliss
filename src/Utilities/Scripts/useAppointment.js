@@ -41,7 +41,6 @@ function useAppointment(){
                 time:longTime
             })
 
-            console.log(adventureTitle, categoryName)
         }
             
     }

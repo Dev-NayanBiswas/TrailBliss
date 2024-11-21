@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../Utilities/Scripts/AllContext";
 import { Navigate, redirect, useLocation, useNavigate } from "react-router-dom";
+import toastAlert from "../Utilities/Scripts/toastify";
 
 function GoogleLogin(){
   const {googleLogin} = useContext(AuthContext);
@@ -10,9 +11,9 @@ function GoogleLogin(){
   function handleGoogleLogin(){
     googleLogin()
     .then(()=>{
+      toastAlert("success","Logged in Successfully")
       navigate(location.state? location.state : "/")
-      console.log(location)
-    })
+    }).catch(err=>toastAlert("error",`${err.message}`))
   }
   return (
     <>

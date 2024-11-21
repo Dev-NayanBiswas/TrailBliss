@@ -3,19 +3,22 @@ import { MdOutlineMailLock } from "react-icons/md";
 import { GiCampfire } from "react-icons/gi";
 import { BsClockHistory } from "react-icons/bs";
 import { useContext } from "react";
-import { AppointmentContext } from "../Utilities/Scripts/AllContext";
+import { AppointmentContext, AuthContext } from "../Utilities/Scripts/AllContext";
+import toastAlert from "../Utilities/Scripts/toastify";
 
 function Modal({appData,onClose}){
     const {appoint,setAppoint} = useContext(AppointmentContext);
+    const {userData} = useContext(AuthContext);
 
   function handleCreate(id){
-    const isExisted = appoint?.find(app => app.id === id);
+    const findingUserHistory = appoint?.filter(data=> data.email === appData.email);
+    const isExisted = findingUserHistory?.find(app => app.id === id);
     if(isExisted){
-        alert("You Already have an Appointment")
+        toastAlert("info","You Already have an Appointment")
     }else{
         onClose();
         setAppoint(prev=>[...prev,appData]);
-        alert("Just Scheduled up an appointment")
+        toastAlert("success","Just Scheduled up an appointment")
     }
   }
 

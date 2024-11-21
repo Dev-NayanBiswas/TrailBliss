@@ -5,17 +5,26 @@ import { MdOutlineMailLock } from "react-icons/md";
 import { GiCampfire } from "react-icons/gi";
 import { BsClockHistory } from "react-icons/bs";
 import { useContext } from "react";
-import { AppointmentContext } from "../Utilities/Scripts/AllContext";
+import { AppointmentContext, AuthContext } from "../Utilities/Scripts/AllContext";
+import toastAlert from "../Utilities/Scripts/toastify";
 
 function AppointmentCards({appInfo}){
     const {appoint,setAppoint} = useContext(AppointmentContext);
+    const {userData,admin} = useContext(AuthContext);
     const {campName,email,id,image,name,time} = appInfo || {}
 
-    function handleRemoveAppoint(id){
-        console.log(id)
-        const filterData = appoint?.filter(app=>app.id !== id);
-        setAppoint(filterData);
-        alert("Appointment Removed")
+    function handleRemoveAppoint(id,email){
+      if(email !== admin && email !== userData.email){
+        toastAlert("error","Admin can't Remove others Appointments")
+        return;
+      }else if(email === userData.email){
+        const filterUserData = appoint?.filter(data=>data?.email=== userData?.email)
+        const filterData = filterUserData?.filter(app=>app?.id !== id);
+        const otherUserData = appoint?.filter(info => info.email !== userData.email)
+        const newArray = [...otherUserData,...filterData]
+        setAppoint(newArray);
+        toastAlert("info","Appointment Removed")
+      }
     }
   return (
     <section className="flex lg:flex-row flex-col items-center bg-white shadow-lg rounded-ss-lg p-4 gap-4 w-full">
@@ -46,7 +55,7 @@ function AppointmentCards({appInfo}){
       </section>
 
       <button
-      onClick={()=>handleRemoveAppoint(id)}
+      onClick={()=>handleRemoveAppoint(id,email)}
         className="p-4 text-white rounded-full transition duration-500"
       >
         <TiPlusOutline fill="red" size={28} className="-rotate-45"/>

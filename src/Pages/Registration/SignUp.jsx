@@ -4,12 +4,12 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import ImageUploader from "../../Utilities/Scripts/ImageUploader";
 import { AuthContext } from "../../Utilities/Scripts/AllContext";
+import toastAlert from "../../Utilities/Scripts/toastify";
 
 function SignUp(){
   const {registrationWithEmail,updateUserProfile} = useContext(AuthContext);
-  const location = useLocation();
   const navigate = useNavigate();
-  console.log(location)
+
 
   const [showPass, setShowPass] = useState(false);
   const [signUpErr, setSignUpErr] = useState({
@@ -52,26 +52,28 @@ function SignUp(){
     const errorExisted = Object.values(signUpErr).some(err=>err.length > 0)
     const hasEmptyFields = Object.values(userData).some(data=> data===""|| data=== false)
     if(errorExisted ){
-          alert("Fix the Errors first")
+          toastAlert("warning","Fix the Errors first")
           return
         }
     else if(hasEmptyFields){
-      alert("Can't Submit Empty Fields");
+      toastAlert("info","Can't Submit Empty Fields");
       return
     }
     else{
       //! Creating New User 
       registrationWithEmail(userData.email, userData.password)
       .then(()=>{
-        alert("New User Created");
+        toastAlert("success","New User Created");
         updateUserProfile(userData.name,userData.imageURL)
         .then(()=>{
-          navigate("/")
-          alert("User Updated")})
-        .catch(err=>console.log(err.message))
+          navigate("/")})
+        .catch(err=>toastAlert("error",`${err.message}`))
         
       })
-      .catch(err=>setAuthError(err.message))
+      .catch(err=>{
+        setAuthError(err.message);
+        toastAlert("error",`Invalid Credentials`)
+      })
         }
     }
 

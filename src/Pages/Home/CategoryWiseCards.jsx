@@ -6,11 +6,8 @@ function CategoryWiseCards() {
     const [similarCards, setSimilarCards] = useState([])
     const {category} = useParams();
     const [data] = useOutletContext();
-    console.log(data)
-    console.log(category)
     useEffect(()=>{
         const selectedCategory = data?.filter(sameCategory =>sameCategory.categoryName === category);
-        console.log(selectedCategory);
         setSimilarCards(selectedCategory)
     },[category]);
 

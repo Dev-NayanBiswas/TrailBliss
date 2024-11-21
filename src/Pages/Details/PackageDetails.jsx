@@ -32,7 +32,6 @@ function PackageDetails(){
           const {adventureTitle,ecoFriendlyFeatures,image,categoryName,shortDescription,adventureCost,bookingAvailability,location,duration,adventureLevel,includedItems,maxGroupSize,specialInstructions} = card || {}
 
 
-    console.log(scheduleData)
   return (
     <>
     

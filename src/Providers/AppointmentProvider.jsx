@@ -3,10 +3,13 @@ import { AppointmentContext } from "../Utilities/Scripts/AllContext";
 
 function AppointmentProvider({children}){
     const [appoint, setAppoint]= useState([]);
+    const [userWiseData, setUserWiseData] = useState([])
 
     const appointmentObj={
         appoint,
-        setAppoint
+        setAppoint,
+        userWiseData,
+        setUserWiseData
     }
   return (
     <AppointmentContext.Provider value={appointmentObj}>

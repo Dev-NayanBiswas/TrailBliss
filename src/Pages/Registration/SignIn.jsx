@@ -6,6 +6,7 @@ import { FaEye } from "react-icons/fa6";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import ImageUploader from "../../Utilities/Scripts/ImageUploader";
 import dynamicTitle from "../../Utilities/Scripts/dynamicTitle";
+import toastAlert from "../../Utilities/Scripts/toastify";
 
 
 function SignIn(){
@@ -19,6 +20,7 @@ function SignIn(){
   })
   const location = useLocation();
   const navigate = useNavigate();
+  const emailRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   
   function handleSubmit(e){
     e.preventDefault();
@@ -29,14 +31,25 @@ function SignIn(){
 
   function handleSignIn(e){
     e.preventDefault();
-    console.log("Handle SignIn", userInfo)
+    setAuthError(null)
+    if(!userInfo.email.length){
+      toastAlert("info","Empty Email Field")
+      return;
+    }
+    if(!emailRegEx.test(userInfo.email)){
+      toastAlert("warning","Wrong Email Formation");
+      return;
+    }
+
     signingWithEmail(userInfo.email,userInfo.password)
     .then(()=>{
-      console.log(userData)
-      alert("Logged In")
+      toastAlert("success","Successfully Signed in")
       navigate(`${location.state ? location.state : "/" }`)
+      return;
     })
-    .catch(err=>setAuthError(err.message))
+    .catch(err=>{
+      toastAlert("error","Wrong Email or Password")
+      setAuthError(err.message)})
   }
    
 
@@ -54,6 +67,7 @@ function SignIn(){
         name="email"
         onChange={handleSubmit}
         placeholder="" 
+        required
         className="peer primary_input"/>
         <label className="text-center customLabel">Email</label>
         </section>
@@ -69,10 +83,10 @@ function SignIn(){
         className="peer primary_input"/>
         <label className="text-center customLabel">Password</label>
         <span onClick={()=>setShowPass(!showPass)} className="absolute right-5 top-[35%] text-[var(--primary-color)] cursor-pointer">{showPass? <FaEye size={20}/> : <TbEyeClosed size={20}/>}</span>
-        {authError && authError === "Firebase: Error (auth/invalid-credential)."? <p className="text-red-500 text-xs italic text-left">Wrong Email or Password. Try again!</p> :""}
+        {authError === "Firebase: Error (auth/invalid-credential)."? <p className="text-red-500 text-xs italic text-left">Wrong Email or Password. Try again!</p> :""}
         </section>
         <section className="mb-3 lg:w-5/12 md:w-10/12 w-full mx-auto">
-        <Link to="/reset" className="text-xs underline text-blue-600 font-bold italic"><span>Forgot your password <span className="text-red-600 text-sm no-underline">!!</span></span></Link>
+        <Link to={`/reset/${userInfo.email || ""}`} className="text-xs underline text-blue-600 font-bold italic"><span>Forgot your password <span className="text-red-600 text-sm no-underline">!!</span></span></Link>
         </section>
         <section className="text-center">
         <button onClick={(e)=>handleSignIn(e)} className="px-6 py-2 bg-[var(--primary-color)] rounded-s-full rounded-e-full md:w-5/12 w-8/12 text-white">Sign In</button>

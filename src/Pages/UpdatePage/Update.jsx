@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ImageUploader from "../../Utilities/Scripts/ImageUploader";
 import { AuthContext } from "../../Utilities/Scripts/AllContext";
+import toastAlert from "../../Utilities/Scripts/toastify";
 
 function Update() {
     const navigate = useNavigate();
@@ -19,17 +20,18 @@ function Update() {
 
     function handleUpdate(e){
         e.preventDefault();
-        console.log(updateData)
         const validate = Object.values(updateData).some(data => data === "");
         if(validate){
-            alert("Cant Submit Empty Field")
+            toastAlert("info","Cant Submit Empty Field")
         }else{
           updateUserProfile(updateData.name, updateData.imageURL)
           .then(()=>{
-            alert("Profile Updated")
+            toastAlert("success","Your Profile Updated")
             navigate("/portfolio")
           })
-          .catch(err=>alert(err.message))
+          .catch(err=>{
+            toastAlert("error",`Invalid Inputs`)
+          })
         }
     }
   return (
@@ -68,7 +70,7 @@ function Update() {
               <label className='text-center customLabel'>imageURL</label>
             </section>
             <section className="text-center w-5/12 mx-auto">
-            <button type="submit" onClick={handleUpdate} className="px-6 py-2 bg-[var(--primary-color)] rounded-s-full rounded-e-full md:w-5/12 w-8/12 text-white">Confirm Update</button>
+            <button type="submit" onClick={handleUpdate} className="lg:px-6 px-5 py-2 bg-[var(--primary-color)] rounded-s-full rounded-e-full lg:w-5/12 text-white whitespace-nowrap">Confirm Update</button>
             </section>
             
           </form>
