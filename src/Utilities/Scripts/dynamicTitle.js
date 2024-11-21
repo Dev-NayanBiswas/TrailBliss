@@ -6,7 +6,7 @@ function dynamicTitle(){
     useEffect(()=>{    
     const pathArr = location.pathname.split("/");
     let path = pathArr[pathArr.length-1].split("%20").join(" ").toUpperCase();
-    path = path === '' ? "HOME" : path
+    path = path === '' ? "HOME" : location.pathname.includes("/details")? "DETAILS" : path;
     document.title = path;
   },[location?.pathname])
 }
