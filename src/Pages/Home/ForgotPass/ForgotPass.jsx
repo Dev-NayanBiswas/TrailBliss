@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ImageUploader from "../../../Utilities/Scripts/ImageUploader";
 import { AuthContext } from "../../../Utilities/Scripts/AllContext";
@@ -8,11 +8,20 @@ import toastAlert from "../../../Utilities/Scripts/toastify";
 function ForgotPass(){
     dynamicTitle();
     const {value} = useParams();
+    console.log(value)
     const {resetPasswordEmail} = useContext(AuthContext);
     const navigate = useNavigate()
-    const [email,setEmail] = useState("")
+    const [email,setEmail] = useState(value || "")
     const emailRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+
+
+    useEffect(()=>{
+      if(value){
+        setEmail(value)
+        console.log(value)
+      }
+    },[value])
     
     function handleSendRestPassEmail(e){
         e.preventDefault();
@@ -27,6 +36,7 @@ function ForgotPass(){
             })
         }
     }
+
 
     function goBack(e){
         e.preventDefault();
@@ -54,7 +64,7 @@ function ForgotPass(){
                     type='email'
                     id='email'
                     name='email'
-                    defaultValue={value}
+                    value={email}
                     onChange={(e)=>setEmail(e.target.value)}
                     placeholder=''
                     className='peer primary_input'
