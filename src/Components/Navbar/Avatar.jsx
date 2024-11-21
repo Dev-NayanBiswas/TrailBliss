@@ -17,12 +17,14 @@ function Avatar(){
                         {
                             userData?.photoURL ?
                             <img className="object-cover object-center h-full w-full rounded-full" src={userData?.photoURL} alt="" /> :
-                            <img className="object-cover object-center h-full w-full rounded-full" src={ImageUploader('updateUser.png')} alt="" /> 
+                            <Link to="/registration/signIn" className="flex flex-row justify-between items-center align-middle gap-2 w-[150px] border border-[var(--primary-color)] px-[5px] py-1 text-sm rounded-e-full rounded-s-full btn_anim text-[var(--primary-color)] whitespace-nowrap">
+                                <img className="object-contain object-left h-8 aspect-1 rounded-full" src={ImageUploader('updateUser.png')} alt="" /> <span className="text-left text-lg font-semibold mr-8 self-center">Sign In</span>
+                            </Link> 
                         }
                     </figure>
                     <section className="relative top-0">
                         {
-                        showOption ?
+                        showOption && userData?.email ?
                         <section onMouseLeave={()=>setShowOptions(false)} className="lg:absolute right-[45%] h-fit  bg-white lg:shadow-xl flex lg:flex-col flex-row gap-3 p-2 lg:w-[8vw] w-full justify-center items-center rounded-sm mx-auto text-center">
                             <p className="text-sm font-semibold italic text-blue-600 text-[var(--primary-color)] lg:w-full px-5 py-1 border border-[var(--primary-color)] btn_anim">{nameShort}</p>
                             <button onClick={signOutUser} className="text-white w-full px-5 py-1 bg-[var(--primary-color)] btn_anim whitespace-nowrap">Sign out</button>

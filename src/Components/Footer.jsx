@@ -15,8 +15,9 @@ function Footer() {
     <p className="md:text-3xl text-xl font-semibold text-[var(--primary-color)]">
       TrailBliss
     </p>
-    
+    <small className="w-7/12 font-semibold text-gray-900 tracking-wide">"Nature nurtures the soul, inspiring harmony, balance, and endless wonder."</small>
     <p className="text-lg text-blue-400 italic font-semibold">Serving nature since 1999</p>
+    
     <section className="flex gap-2 items-center">
         <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F" target="_blank"><FaFacebook size={30} fill="#1877F2"/></a>
         <a href="https://github.com/Dev-NayanBiswas" target="_blank"><RiGithubFill size={30} /></a>

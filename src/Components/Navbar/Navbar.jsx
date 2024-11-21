@@ -42,7 +42,7 @@ function Navbar(){
                 </section>
             </nav>
         </nav>
-            <section className={`${showDrop? 'h-[60vh]':"h-0"} transition-[height] overflow-hidden ease-linear duration-500 lg:hidden z-30`}>
+            <section className={`${showDrop? 'h-[50vh]':"h-0"} transition-[height] overflow-hidden ease-linear duration-500 lg:hidden z-30`}>
                 <DropDown/>
             </section>
 
