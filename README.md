@@ -121,11 +121,11 @@
 </p>
 
 
-***For Admin Panel***
-***Admin :*** *ami@dmin.com*
-***Password :*** *Ami@dmin123*
-_It's based on context driven data so reload will erase them all_
-***This project is responsive for Large, Medium and Small devices***
+- ***For Admin Panel***
+- ***Admin :*** *ami@dmin.com*
+- ***Password :*** *Ami@dmin123*
+- _It's based on context driven data so reload will erase them all_
+- ***This project is responsive for Large, Medium and Small devices***
 
 ***
 
