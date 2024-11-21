@@ -5,6 +5,8 @@
     </a>
 </p>
 
+***
+
 *TrailBliss is a ***Echo Friendly Travel Adventure*** blog where nature Lovers can find their right place to tak a break from this carnival of rust, Here user can choose their packages by get to know every details about it, Even our Experts are always ready to support them from 10:00AM to 8:00PM*
 
 #### ***Purpose***
@@ -96,12 +98,12 @@
 
 
 ***npm Packages used in this Project***
-    AOS for scroll Animation
-    Firebase for Authentication
-    React-fast-marquee for Category Navbar
-    React-icons for Icons
-    React-slick for Carousel
-    React-toastify for Alerts
+  - AOS for scroll Animation
+  - Firebase for Authentication
+  - React-fast-marquee for Category Navbar
+  - React-icons for Icons
+  - React-slick for Carousel
+  - React-toastify for Alerts
 
 <br>
 <br>
@@ -110,6 +112,8 @@
 <br>
 <br>
 <br>
+
+****
 <p>
     <a>
     <h4><i>Drawbacks and Limitations</i></h4>
