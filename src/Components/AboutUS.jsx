@@ -16,9 +16,9 @@ function AboutUs() {
             />
           <div className="bg-black/45 rounded-xl top-0 inset-0 absolute w-full h-full"></div>
           </figure>
-          <h1 className="absolute text-4xl font-semibold text-white left-20">Backpack Ready? 
+          <h1 className="absolute lg:text-4xl text-3xl font-semibold text-white lg:left-20 left-14">Backpack Ready? 
             <br />
-            <span className="text-blue-300 text-6xl">Let's Discover</span>
+            <span className="text-blue-300 lg:text-6xl text-4xl">Let's Discover</span>
             </h1>
         </section>
         <section>
